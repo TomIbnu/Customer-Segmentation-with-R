@@ -1,18 +1,18 @@
 #Bagian Data Preparation
 
-Customer <- read.csv("customer sample dataset.txt", sep="\t")
+pelanggan <- read.csv("https://storage.googleapis.com/dqlab-dataset/customer_segments.txt", sep="\t")
 
-Customer_matrix <- data.matrix(Customer[c("Jenis.Kelamin", "Profesi", "Tipe.Residen")])
+pelanggan_matrix <- data.matrix(pelanggan[c("Jenis.Kelamin", "Profesi", "Tipe.Residen")])
 
-Customer <- data.frame(Customer, Customer_matrix)
+pelanggan <- data.frame(pelanggan, pelanggan_matrix)
 
-Profesi <- unique(Customer[c("Profesi","Profesi.1")])
+Profesi <- unique(pelanggan[c("Profesi","Profesi.1")])
 
-Jenis.Kelamin <- unique(Customer[c("Jenis.Kelamin","Jenis.Kelamin.1")])
+Jenis.Kelamin <- unique(pelanggan[c("Jenis.Kelamin","Jenis.Kelamin.1")])
 
-Tipe.Profesi <- unique(Customer[c("Tipe.Residen","Tipe.Residen.1")])
+Tipe.Profesi <- unique(pelanggan[c("Tipe.Residen","Tipe.Residen.1")])
 
-Customer$NilaiBelanjaSetahun <- Customer$NilaiBelanjaSetahun/1000000
+pelanggan$NilaiBelanjaSetahun <- pelanggan$NilaiBelanjaSetahun/1000000
 
 field_yang_digunakan = c("Jenis.Kelamin.1", "Umur", "Profesi.1", "Tipe.Residen.1","NilaiBelanjaSetahun")
 
@@ -20,12 +20,12 @@ field_yang_digunakan = c("Jenis.Kelamin.1", "Umur", "Profesi.1", "Tipe.Residen.1
 
 set.seed(100)
 
-segmentasi <- kmeans(x=Customer[field_yang_digunakan], centers=5, nstart=25)
+segmentasi <- kmeans(x=pelanggan[field_yang_digunakan], centers=5, nstart=25)
 
 #Penggabungan hasil cluster
 
 segmentasi$cluster
 
-Customer$cluster <- segmentasi$cluster
+pelanggan$cluster <- segmentasi$cluster
 
-str(Customer)
+str(pelanggan)
