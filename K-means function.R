@@ -19,4 +19,3 @@ segmentasi <- kmeans(x=Customer[field_yang_digunakan], centers=5, nstart=25)
 
 #tampilkan hasil k-means
 segmentasi
-
