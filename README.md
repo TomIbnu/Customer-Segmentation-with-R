@@ -97,6 +97,7 @@ Theoretically, here are some things we can observe with SS:
 
 If entered into a line graph, the plotting of the total SS for each cluster is as follows.
 ![elbow_effect](https://user-images.githubusercontent.com/106945977/173736541-0b9d420a-9984-4b2a-9c3f-a95ba4bd3d16.png)
+
 The far left point is the number of SS for 1 number of clusters, the second point is for 2 number of clusters, and so on. Notice that the further to the right the difference in distance between each point is getting smaller.
 This line graph has a shape like an elbow, and for the optimal number of clusters we usually take the point of the elbow. In the example above we can take 4 or 5.
 The decision-making process based on this elbow plotting is what we call the Elbow Effect or the Elbow Method.
