@@ -119,4 +119,4 @@ Based on this concept, the following is an explanation for the Kmeans output res
 3. between_SS: is the total_SS minus the sum of the SS values of the entire cluster.
 4. (between_SS / total_SS) is the ratio between between_SS divided by total_SS. The bigger the percentage, generally the better.
 # Conclusion
-From sum of square and elbow graphic, we can conclude that optimal segmentation in the 5th cluster because from the elbow effect, the best result is 4th and 5th cluster but in the sum of square showed that 5th cluster have less value than 4th cluster which is best potential for cluster.
+From sum of square and elbow graphic, we can conclude that optimal segmentation in the 5th cluster because from the elbow effect, the best result is 4th and 5th cluster but in the sum of square showed that 5th cluster have less value than 4th cluster which is best potential for segments customer.
